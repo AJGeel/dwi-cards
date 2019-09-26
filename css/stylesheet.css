@@ -1,0 +1,73 @@
+*{
+  /* transition: all .5s ease-in-out; */
+}
+
+body{
+  background-color: #fafafa;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.wrapper img{
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 5px;
+  margin: 40px 40px;
+
+  transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+
+
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07),
+                0 2px 4px rgba(0,0,0,0.07),
+                0 4px 8px rgba(0,0,0,0.07),
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07),
+                0 32px 64px rgba(0,0,0,0.07);
+}
+
+.wrapper img:hover{
+  cursor: pointer;
+  transform: translateY(-20px);
+  opacity: .8;
+}
+
+.wrapper img:last-child{
+  /* animation-delay: .15s; */
+}
+
+.header{
+  position: absolute;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+}
+
+button{
+  position: absolute;
+  bottom: 40px;
+}
+
+
+
+@keyframes fade-in {
+    from {opacity: 0; transform: translateY(100px)}
+    to {opacity: 1;}
+}
+
+.fade-in-element {
+  animation: fade-in 1.4s;
+}
+
+.hidden {
+  opacity: 0;
+}
